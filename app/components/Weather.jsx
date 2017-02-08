@@ -33,7 +33,7 @@ var Weather = React.createClass({
         
         function renderMessage() {
             if(isLoading) {
-                return <img src="https://www.jeffdunham.com/wp-content/themes/jeff/images/loading.gif" width="150"/>
+                return <img className="text-center" src="https://www.jeffdunham.com/wp-content/themes/jeff/images/loading.gif" width="150"/>
             } else if(temp && location) {
                 return <WeatherMessage temp={temp} location={location}></WeatherMessage>;
             }
@@ -41,7 +41,7 @@ var Weather = React.createClass({
         
         return(
             <div>
-                <h3>Weather Component</h3>
+                <h1 className="text-center">GetWeather</h1>
                 <WeatherForm onSearch={this.handleSearch}></WeatherForm>
                 {renderMessage()}
             </div>
